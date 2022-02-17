@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<!--    <span>.</span>-->
+    <div class="main">
+        <span class="header">
+            <h1>TODO</h1>
+            <span class="icon moon"></span>
+        </span>
+        <form>
+            <button class="todo-button" type="submit">
+                <i class="far fa-circle"></i>
+            </button>
+            <input placeholder="Create A New Todo" type="text" class="todo-input" id="">
+        </form>
+        <div class="todo-container">
+            <ul class="todo-list"></ul>
+            <div class="todoControl">
+                <div>
+                    <span class="todoCount"></span>
+                    <span> item left</span>
+                </div>
+                <div class="filterSection">
+                    <span class="allFilter">All</span>
+                    <span class="activeFilter">Active</span>
+                    <span class="completedFilter">Completed</span>
+                </div>
+
+                <div class="clearComplete">Clear Complete</div>
+            </div>
+        </div>
+        <div class="filterSectionMob">
+            <span class="filterOptions allFilter">All</span>
+            <span class="filterOptions activeFilter">Active</span>
+            <span class="filterOptions completedFilter">Completed</span>
+        </div>
+    </div>
+    </div>
+
+
+<script src="js/app.js"></script>
+<script>
+    const dragArea = document.querySelector(".todo-list")
+    new Sortable(dragArea, {
+        animation: 350
+    }) ;
+</script>
+</body>
+</html>

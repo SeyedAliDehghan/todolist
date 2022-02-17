@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary:#fff;
+    --secondary: #a8a8a8;
+    --third:#e4e5f1;
+    --text-color: #5e5e5e;
+}
+.icon{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    background-image: url("../img/sun.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.sun{
+    background-image: url("../img/sun.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.moon{
+    background-image: url("../img/moon.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.container{
+    background-image: url("../img/bg.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    /*max-width: 540px;*/
+}
+
+body {
+    /*background: black;*/
+    /*background-image: linear-gradient(120deg, #f6d365, #fda085);*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    min-height: 100vh;
+    font-size: 1rem;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    margin: auto;
+}
+
+.header{
+    font-size: 1.5rem;
+    /*min-height: 20vh;*/
+    /*width: 100%;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+    padding: 5rem 0 1rem 0;
+}
+
+form {
+    margin-bottom: 0;
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form input{
+    width: 100%;
+}
+/*form input, form button {*/
+/*    padding: 0.5rem;*/
+/*    font-size: 2rem;*/
+/*    border: none;*/
+/*    background: white;*/
+/*}*/
+.todo-input{
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background: var(--primary);
+    color: var(--text-color);
+
+}
+.todo-button{
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    background: var(--primary);
+}
+form{
+    margin-top: -2rem;
+}
+form button {
+    color: var(--secondary);
+    background: var(--primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+::placeholder{
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.fa-circle{
+    opacity: 40%;
+}
+
+
+
+.todo-container {
+    /*margin-top: -1rem;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+
+
+}
+
+.todo-list {
+    min-width: 100%;
+    list-style: none;
+}
+.todo-list li:first-of-type{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.todo {
+    margin: 0;
+    background: var(--primary);
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-bottom: 1px solid var(--third);
+
+}
+
+.todo li {
+    flex: 1;
+    /*margin-left: 0.5rem;*/
+}
+li{
+    cursor: grab;
+}
+.lowOpacity{
+    opacity: 0.4;
+}
+.trash-btn, .complete-btn {
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.trash-btn i{
+    font-size: 1.5rem;
+}
+.complete-btn {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 50%;
+    opacity: 50%;
+    border: 0.1rem solid var(--secondary);
+    /*margin-left: 1rem;*/
+}
+.completedBtn{
+    border: 0.1rem solid var(--secondary);
+    background: url(../img/check.png),linear-gradient(
+            83deg,#57ddff,#c058f3);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 100%;
+}
+
+.trash-btn {
+    opacity: 0;
+    color: var(--secondary);
+    background: var(--primary);
+    transition: all 0.2s;
+}
+li:hover  .trash-btn{
+    opacity: 100;
+}
+.todo-item {
+    padding: 0 0.5rem;
+    color: var(--text-color);
+    width: 100%;
+    margin-left: 0.5rem;
+}
+
+.fa-times, .fa-check {
+    pointer-events: none;
+}
+.fa-times{
+    pointer-events: none;
+}
+.completed {
+    text-decoration: line-through;
+    /*opacity: 0.3;*/
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    background: white;
+    color: #ff6f47;
+}
+.todoControl{
+    padding: 1rem;
+    color: grey;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    justify-content: space-between;
+    width: 100%;
+}
+.todoControl span{
+    margin-left: 0.5rem;
+}
+.allFilter,.activeFilter,.completedFilter{
+    cursor: pointer;
+}
+.bold{
+    font-weight: bold;
+}
+.clearComplete{
+    cursor: pointer;
+}
+.todoCount{
+    cursor: pointer;
+}
+.filterSectionMob{
+    display: none;
+}
